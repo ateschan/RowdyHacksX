@@ -10,8 +10,7 @@ def render_frontend():
     #After bg
     pygame.draw.rect(screen, "bisque4", 
                     pygame.Rect(screen.get_width()/2 - 350, 120, 
-                    700, 
-                    750), 
+                    700, 750), 
                     width=0, 
                     border_radius=15, 
                     border_top_left_radius=-1, 
@@ -30,7 +29,7 @@ def render_frontend():
                     border_bottom_right_radius=-1)
 
     #Inside box 
-    pygame.draw.rect(screen, "grey", 
+    pygame.draw.rect(screen, (25,31,61), 
                     pygame.Rect(screen.get_width()/2 - 250, 
                     270, 500, 500), 
                     width=0, border_radius=15, 
@@ -38,6 +37,16 @@ def render_frontend():
                     border_top_right_radius=0, 
                     border_bottom_left_radius=0, 
                     border_bottom_right_radius=0)
+    
+    pygame.draw.rect(screen, "black", 
+                    pygame.Rect(screen.get_width()/2 - 50, 260, 
+                    20, 220), 
+                    width=0, 
+                    border_radius=15, 
+                    border_top_left_radius=-1, 
+                    border_top_right_radius=-1, 
+                    border_bottom_left_radius=-1, 
+                    border_bottom_right_radius=-1)
     
     # #TOP RIGHT
     # pygame.draw.line(screen, "black",
