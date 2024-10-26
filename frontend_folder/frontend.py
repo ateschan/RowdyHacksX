@@ -1,5 +1,7 @@
 import pygame
-screen = pygame.display.set_mode((1600, 900))
+
+#Edit resolution here...
+screen = pygame.display.set_mode((1600, 900), pygame.RESIZABLE)
 
 def render_frontend():
     #bg
@@ -7,9 +9,9 @@ def render_frontend():
 
     #After bg
     pygame.draw.rect(screen, "bisque4", 
-                    pygame.Rect(450, 120, 
-                    screen.get_width() - 900, 
-                    screen.get_height() - 160), 
+                    pygame.Rect(screen.get_width()/2 - 350, 120, 
+                    700, 
+                    750), 
                     width=0, 
                     border_radius=15, 
                     border_top_left_radius=-1, 
