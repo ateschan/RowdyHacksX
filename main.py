@@ -1,9 +1,9 @@
 # Example file showing a basic pygame "game loop"
 import pygame
+import frontend_folder.frontend as fe
 
 # pygame setup
 pygame.init()
-screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
 
@@ -15,7 +15,7 @@ while running:
             running = False
 
     # fill the screen with a color to wipe away anything from last frame
-    screen.fill("purple")
+    fe.render_frontend()
 
     # RENDER YOUR GAME HERE
 
