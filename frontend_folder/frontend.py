@@ -1,4 +1,12 @@
 import pygame
+pygame.font.init()
+
+#Text stuff
+font = pygame.font.SysFont('./frontend_folder/terminus.ttf', 40)
+textTop = font.render('DISCONNECT CAPACITOR DRIVE', True, "white", "brown3")
+textBottom = font.render('BEFORE OPENING', True, "white", "brown3")
+textTopRect = textTop.get_rect()
+textBottomRect = textBottom.get_rect()
 
 #Edit resolution here...
 screen = pygame.display.set_mode((1600, 900), pygame.RESIZABLE)
@@ -6,6 +14,8 @@ screen = pygame.display.set_mode((1600, 900), pygame.RESIZABLE)
 def render_frontend():
     #bg
     screen.fill("orange")
+    textTopRect.center = (screen.get_width()/2, 150)
+    textBottomRect.center = (screen.get_width()/2, 190)
 
     #After bg
     pygame.draw.rect(screen, "bisque4", 
@@ -37,7 +47,7 @@ def render_frontend():
                     border_top_right_radius=0, 
                     border_bottom_left_radius=0, 
                     border_bottom_right_radius=0)
-    
+    # TURD
     pygame.draw.rect(screen, "black", 
                     pygame.Rect(screen.get_width()/2 - 50, 260, 
                     20, 220), 
@@ -47,7 +57,32 @@ def render_frontend():
                     border_top_right_radius=-1, 
                     border_bottom_left_radius=-1, 
                     border_bottom_right_radius=-1)
+
+    #Top Label
+    pygame.draw.rect(screen, "brown3", 
+                    pygame.Rect(screen.get_width()/2 - 240, 130, 480, 40),
+                    width=0, 
+                    border_radius=0, 
+                    border_top_left_radius=-1, 
+                    border_top_right_radius=-1, 
+                    border_bottom_left_radius=-1, 
+                    border_bottom_right_radius=-1)
+
     
+    #Top Label
+    pygame.draw.rect(screen, "brown3", 
+                    pygame.Rect(screen.get_width()/2 - 135, 170, 
+                    270, 
+                    40), 
+                    width=0, 
+                    border_radius=0, 
+                    border_top_left_radius=-1, 
+                    border_top_right_radius=-1, 
+                    border_bottom_left_radius=-1, 
+                    border_bottom_right_radius=-1)
+
+    screen.blit(textTop, textTopRect)
+    screen.blit(textBottom, textBottomRect)
     # #TOP RIGHT
     # pygame.draw.line(screen, "black",
     #                  (screen.get_width()/2 + 290, 65), 
