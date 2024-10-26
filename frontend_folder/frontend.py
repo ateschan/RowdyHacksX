@@ -1,5 +1,5 @@
 import pygame
-screen = pygame.display.set_mode((1280, 720))
+screen = pygame.display.set_mode((1600, 900))
 
 def render_frontend():
     #bg
@@ -7,9 +7,9 @@ def render_frontend():
 
     #After bg
     pygame.draw.rect(screen, "bisque4", 
-                    pygame.Rect(30, 30, 
-                    screen.get_width() - 60, 
-                    screen.get_height() - 60), 
+                    pygame.Rect(450, 120, 
+                    screen.get_width() - 900, 
+                    screen.get_height() - 160), 
                     width=0, 
                     border_radius=15, 
                     border_top_left_radius=-1, 
@@ -17,11 +17,11 @@ def render_frontend():
                     border_bottom_left_radius=-1, 
                     border_bottom_right_radius=-1)
 
-    #tubing
+    #Black Outer Tubing
     pygame.draw.rect(screen, "black", 
                     pygame.Rect(screen.get_width()/2 - 300, 
-                    60, 600, 600), 
-                    width=25, border_radius=7, 
+                    220, 600, 600), 
+                    width=35, border_radius=30, 
                     border_top_left_radius=-1,
                     border_top_right_radius=-1, 
                     border_bottom_left_radius=-1, 
@@ -30,29 +30,39 @@ def render_frontend():
     #Inside box 
     pygame.draw.rect(screen, "grey", 
                     pygame.Rect(screen.get_width()/2 - 250, 
-                    110, 500, 500), 
-                    width=0, border_radius=100, 
+                    270, 500, 500), 
+                    width=0, border_radius=15, 
                     border_top_left_radius=0,
                     border_top_right_radius=0, 
                     border_bottom_left_radius=0, 
                     border_bottom_right_radius=0)
-
+    
+    # #TOP RIGHT
     # pygame.draw.line(screen, "black",
     #                  (screen.get_width()/2 + 290, 65), 
-    #                  (screen.get_width()/2 + 230, 40), 15)
-    # 
+    #                  (screen.get_width()/2 + 250, 110), 3)
+    # #TOP LEFT
     # pygame.draw.line(screen, "black",
     #                  (screen.get_width()/2 - 290, 65), 
-    #                  (screen.get_width()/2 - 350, 40), 15)
-    # 
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 - 290, 650), 
-    #                  (screen.get_width()/2 - 350, 625), 15)
-    # 
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 - 350, 35),
-    #                  (screen.get_width()/2 - 350, 630), 15)
+    #                  (screen.get_width()/2 - 250, 110), 3)
 
+    # #BOTTOM LEFT
     # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 - 350, 40),
-    #                  (screen.get_width()/2 + 230, 40), 15)
+    #                  (screen.get_width()/2 - 300, 655),
+    #                  (screen.get_width()/2 - 250, 610), 3)
+    # #BOTTOM RIGHT
+    # pygame.draw.line(screen, "black",
+    #                  (screen.get_width()/2 + 300, 655),
+    #                  (screen.get_width()/2 + 250, 610), 3)
+    
+    #Red Circle Left
+
+    #Red Circle Right 
+
+    #Red Circle Bottom
+
+    #Yellow Tubing Left
+
+    #Yellow Tubing Right 
+
+    #Yellow Tubing Bottom
