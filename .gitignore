@@ -1,2 +1,3 @@
 .idea
 .git
+./frontend_folder/__pycache__
