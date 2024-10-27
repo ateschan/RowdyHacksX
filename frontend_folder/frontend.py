@@ -59,8 +59,6 @@ def render_frontend():
                     border_top_right_radius=0, 
                     border_bottom_left_radius=0, 
                     border_bottom_right_radius=0)
-    # Capacitor
-    fluxCapacitor()
 
     #Top Label
     pygame.draw.rect(screen, "brown3", 
@@ -84,9 +82,6 @@ def render_frontend():
                     border_top_right_radius=-1, 
                     border_bottom_left_radius=-1, 
                     border_bottom_right_radius=-1)
-
-    screen.blit(textTop, textTopRect)
-    screen.blit(textBottom, textBottomRect)
 
     #Pipe1 Top 
     pygame.draw.rect(screen, "bisque4", 
@@ -130,7 +125,11 @@ def render_frontend():
 
 # Here we should how to draw it onto a screen.
     screen.blit(waveform, (160, 100))
+    screen.blit(textTop, textTopRect)
+    screen.blit(textBottom, textBottomRect)
 
+    # Capacitor
+    fluxCapacitor(screen)
     # #TOP RIGHT
     # pygame.draw.line(screen, "black",
     #                  (screen.get_width()/2 + 290, 65), 

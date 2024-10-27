@@ -1,41 +1,75 @@
 
 import pygame
 
-screen = pygame.display.set_mode((1600, 900), pygame.RESIZABLE)
+def fluxCapacitor(screen):
 
+    surf1 = pygame.Surface((50,220), pygame.SRCALPHA, 32)
+    pygame.draw.rect(surf1, "grey", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=0, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
 
-def fluxCapacitor():
+    pygame.draw.rect(surf1, "aqua", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=3, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
 
+    surf2 = pygame.Surface((50,220), pygame.SRCALPHA, 32)
+    pygame.draw.rect(surf2, "grey", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=0, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
+
+    pygame.draw.rect(surf2, "aqua", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=3, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
+
+    surf3 = pygame.Surface((50,220), pygame.SRCALPHA, 32)
+    pygame.draw.rect(surf3, "grey", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=0, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
+
+    pygame.draw.rect(surf3, "aqua", 
+    pygame.Rect(0, 0, 
+    50, 220), 
+    width=3, 
+    border_radius=15, 
+    border_top_left_radius=-1, 
+    border_top_right_radius=-1, 
+    border_bottom_left_radius=-1, 
+    border_bottom_right_radius=-1)
     
 
-    pygame.draw.rect(screen, "red", 
-    pygame.Rect(screen.get_width()/2 - 155, 350, 
-    50, 175), 
-    width=0, 
-    border_radius=15, 
-    border_top_left_radius=-1, 
-    border_top_right_radius=-1, 
-    border_bottom_left_radius=-1, 
-    border_bottom_right_radius=-1)
+    surf3 = pygame.transform.rotate(surf3, -45)
+    surf2 = pygame.transform.rotate(surf2, 45)
 
-    rightTube = pygame.draw.rect(screen, "green", 
-    pygame.Rect(screen.get_width()/2 + 135, 350, 
-    50, 175), 
-    width=0, 
-    border_radius=15, 
-    border_top_left_radius=-1, 
-    border_top_right_radius=-1, 
-    border_bottom_left_radius=-1, 
-    border_bottom_right_radius=-1)
-
-
-    
-    pygame.draw.rect(screen, "yellow", 
-    pygame.Rect(screen.get_width()/2 - 15, 525, 
-    50, 175), 
-    width=0, 
-    border_radius=15, 
-    border_top_left_radius=-1, 
-    border_top_right_radius=-1, 
-    border_bottom_left_radius=-1, 
-    border_bottom_right_radius=-1)
+    screen.blit(surf1, (screen.get_width()/2 - 25,520))
+    screen.blit(surf2, (screen.get_width()/2 - 205,300))
+    screen.blit(surf3, (screen.get_width()/2 + 20,300))#yellow
