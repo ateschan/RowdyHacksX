@@ -7,11 +7,15 @@ from backend_folder.models.audio_file import AudioFile
 
 pygame.font.init()
 
-audio = AudioFile("../audio/Dream-Remix.mp3")
+audio = AudioFile("../audio/piano.wav")
 freq_data = []
-for frame in audio.frames:
-    for sample in frame.data[0]:
-        freq_data.append(sample)
+drawing_rate = 0
+k = 0
+for i in range(len(audio.frames)):
+    frame = audio.frames[i]
+    for j in range(len(frame.data[:1])):
+        freq_data.append((int(k), frame.data[:1][j]))
+        k+=1
 
 print(freq_data[:30])
 

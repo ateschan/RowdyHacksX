@@ -20,7 +20,7 @@ class AudioFrame:
                 d.append(self.sine(amps[i], freqs[i], point))
             data.append(d)
         self.data = data
-        print(f"Data length: {len(self.data)}")
+
 
     def sine(self, amp, freq, time, offset=0):
         return amp*np.sin(2*np.pi*freq*time)
