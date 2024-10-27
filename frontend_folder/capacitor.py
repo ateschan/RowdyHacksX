@@ -1,6 +1,5 @@
 
 import pygame
-from .waves import generate_wave
 
 
 def fluxCapacitor( screen, waveform1, waveform2, waveform3):

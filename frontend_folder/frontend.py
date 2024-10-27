@@ -1,7 +1,6 @@
 import pygame
 from .capacitor import fluxCapacitor
 from .valves import fluxValves
-import array
 from .waves import generate_wave
 pygame.font.init()
 
@@ -137,7 +136,6 @@ def render_frontend():
                     border_bottom_right_radius=-1)
 
     # Capacitor
-
     pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2 + 175,330), 50)
     pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2 - 175,325), 50)
     pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2,715), 50)
@@ -148,32 +146,3 @@ def render_frontend():
     screen.blit(textTop, textTopRect)
     screen.blit(textBottom, textBottomRect)
 
-    # #TOP RIGHT
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 + 290, 65), 
-    #                  (screen.get_width()/2 + 250, 110), 3)
-    # #TOP LEFT
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 - 290, 65), 
-    #                  (screen.get_width()/2 - 250, 110), 3)
-
-    # #BOTTOM LEFT
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 - 290, 800),
-    #                  (screen.get_width()/2 - 250, 750), 3)
-    # #BOTTOM RIGHT
-    # pygame.draw.line(screen, "black",
-    #                  (screen.get_width()/2 + 300, 755),
-    #                  (screen.get_width()/2 + 250, 710), 3)
-    
-    #Red Circle Left
-
-    #Red Circle Right 
-
-    #Red Circle Bottom
-
-    #Yellow Tubing Left
-
-    #Yellow Tubing Right 
-
-    #Yellow Tubing Bottom
