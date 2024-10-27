@@ -1,4 +1,5 @@
 import pygame
+from .capacitor import fluxCapacitor
 pygame.font.init()
 
 #Text stuff
@@ -47,16 +48,8 @@ def render_frontend():
                     border_top_right_radius=0, 
                     border_bottom_left_radius=0, 
                     border_bottom_right_radius=0)
-    # TURD
-    pygame.draw.rect(screen, "black", 
-                    pygame.Rect(screen.get_width()/2 - 50, 260, 
-                    20, 220), 
-                    width=0, 
-                    border_radius=15, 
-                    border_top_left_radius=-1, 
-                    border_top_right_radius=-1, 
-                    border_bottom_left_radius=-1, 
-                    border_bottom_right_radius=-1)
+    # Capacitor
+    fluxCapacitor()
 
     #Top Label
     pygame.draw.rect(screen, "brown3", 
