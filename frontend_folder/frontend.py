@@ -62,7 +62,7 @@ def render_frontend():
                     border_bottom_right_radius=-1)
 
     
-    #Top Label
+    #Bottom Label
     pygame.draw.rect(screen, "brown3", 
                     pygame.Rect(screen.get_width()/2 - 135, 170, 
                     270, 
@@ -76,6 +76,45 @@ def render_frontend():
 
     screen.blit(textTop, textTopRect)
     screen.blit(textBottom, textBottomRect)
+
+    #Pipe1 Top 
+    pygame.draw.rect(screen, "bisque4", 
+                    pygame.Rect(screen.get_width()/2 - 60, 
+                    0, 120, 120), 
+                    width=0, border_radius=15, 
+                    border_top_left_radius=0,
+                    border_top_right_radius=0, 
+                    border_bottom_left_radius=0, 
+                    border_bottom_right_radius=0)
+
+
+    pygame.draw.rect(screen, "bisque4", 
+                    pygame.Rect(screen.get_width()/2 + 230, 
+                    0, 20, 120), 
+                    width=0, border_radius=15, 
+                    border_top_left_radius=0,
+                    border_top_right_radius=0, 
+                    border_bottom_left_radius=0, 
+                    border_bottom_right_radius=0)
+
+
+    pygame.draw.rect(screen, "bisque4", 
+                    pygame.Rect(screen.get_width()/2 + 300, 
+                    400, 300, 120), 
+                    width=0, border_radius=40, 
+                    border_top_left_radius=-1,
+                    border_top_right_radius=-1, 
+                    border_bottom_left_radius=-1, 
+                    border_bottom_right_radius=-1)
+
+    pygame.draw.rect(screen, "bisque4", 
+                    pygame.Rect(screen.get_width()/2 + 500, 
+                    -40, 100, 520), 
+                    width=0, border_radius=40, 
+                    border_top_left_radius=-1,
+                    border_top_right_radius=-1, 
+                    border_bottom_left_radius=-1, 
+                    border_bottom_right_radius=-1)
     # #TOP RIGHT
     # pygame.draw.line(screen, "black",
     #                  (screen.get_width()/2 + 290, 65), 
