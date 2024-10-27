@@ -87,6 +87,7 @@ class AudioFile:
 
         return freqs, amps
 
-
     def get_rhythm(self):
+        lb.decompose.hpss(self.samples)
+
         pass

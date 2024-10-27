@@ -45,7 +45,7 @@ data = [(0, 49.17446263631915), (1, 42.88358613130537), (2, 27.138273594470558),
 
 waveform1 = pygame.Surface((len(freq_data), 50), pygame.SRCALPHA, 32)
 waveform1 = waveform1.convert_alpha()
-generate_wave(waveform1, 1, "blue", freq_data)
+generate_wave(waveform1, 1, "blue", list(freq_data[::-1]))
 
 waveform2 = pygame.Surface((len(data), 50), pygame.SRCALPHA, 32)
 waveform2 = waveform2.convert_alpha()
