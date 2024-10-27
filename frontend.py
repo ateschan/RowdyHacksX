@@ -1,8 +1,8 @@
 import pygame
-from .capacitor import fluxCapacitor
-from .valves import fluxValves
-from .waves import generate_wave
-from backend_folder.models.audio_file import AudioFile
+from capacitor import fluxCapacitor
+from valves import fluxValves
+from waves import generate_wave
+from models.audio_file import AudioFile
 
 
 pygame.font.init()
