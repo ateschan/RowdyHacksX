@@ -2,7 +2,7 @@ import librosa
 
 class AudioFile:
     def __init__(self, filepath):
-        # Load the audio file in the notebook as a wavefor and store the sample rate
+        # Load the audio file in the notebook and store the sample rate
         audio_data, self.sample_rate = librosa.load(filepath)
         
         # Get the estimated tempo of the track

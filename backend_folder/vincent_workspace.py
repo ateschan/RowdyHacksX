@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pylab as plt
 import IPython.display as ipt
 
 # Beat tracking example
@@ -8,18 +9,17 @@ import librosa
 # 1. Get the file path
 filename = '../audio/sample3.WAV'
 
-# 2. Load the audio as a waveform `y`
-#    Store the sampling rate as `sr`
-y, sr = librosa.load(filename, sr=60)
+samples, sample_rate = librosa.load(filename, sr=100000)
+total_samples = len(samples)
+duration = total_samples / sample_rate
 
-# 3. Run the default beat tracker
-tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+print("Samples array: ", samples)
+print("Total number of samples: ", total_samples)
+print("Samples per second: ", sample_rate)
+print("Audio duration: ", duration)
 
-# 4. Convert the frame indices of beat events into timestamps
-beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+freq = librosa.stft(samples, n_fft=sample_rate//15)
 
-# Frequency
-freq = librosa.stft(y)
+pd.Series(samples).plot(figsize=(10,5), lw=1, title='STFT')
 
-# Intensity
-db = librosa.amplitude_to_db(freq)
+plt.show()
