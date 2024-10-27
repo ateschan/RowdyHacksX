@@ -1,25 +1,30 @@
 import pygame
-from .capacitor import fluxCapacitor
-from .valves import fluxValves
-from .waves import generate_wave
+from capacitor import fluxCapacitor
+from valves import fluxValves
+from waves import generate_wave
 from backend_folder.models.audio_file import AudioFile
 
 
 pygame.font.init()
 
-audio = AudioFile("./audio/piano.wav")
+audio = AudioFile("../audio/piano.wav")
 freq_data = []
 drawing_rate = 0
 k = 0
 print(len(audio.frames[20].data[0]))
-
+sample_rate = 512
 for frame in audio.frames:
-    for key_freq in frame.data:
-        for sample in key_freq:
+    freq1 = frame.data[:1]
+    if len(freq1) > 0:
+        print(len(freq1[0]))
+        for sample in freq1[0]:
             freq_data.append((int(k), sample))
             k+=1
+    else:
+        for i in range(sample_rate):
+            freq_data.append((int(k), 0))
 
-print(freq_data[:30])
+print(f"Freg data len: {len(freq_data)}")
 
 #Text stuff
 font = pygame.font.SysFont('./frontend_folder/terminus.ttf', 40)
