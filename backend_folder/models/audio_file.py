@@ -18,6 +18,8 @@ class AudioFile:
 
         # Perform fft and populate data
         self.freqs, self.amplitudes = self.get_fft()
+        # freqs -> array of frames with
+
 
 
         for i in range(len(self.freqs)):
@@ -82,7 +84,7 @@ class AudioFile:
             freqs.append(np.array(sorted_peak_freqs[:9]))
             amps.append(np.array(sorted_peak_heights[:9]))
 
-
+        print(f"In ft: {len(amps[300])}")
         return freqs, amps
 
 
