@@ -1,5 +1,6 @@
 import pygame
 from .capacitor import fluxCapacitor
+from .valves import fluxValves
 import array
 from .waves import generate_wave
 pygame.font.init()
@@ -129,6 +130,7 @@ def render_frontend():
     screen.blit(textBottom, textBottomRect)
 
     # Capacitor
+    fluxValves(screen)
     fluxCapacitor(screen)
     # #TOP RIGHT
     # pygame.draw.line(screen, "black",
