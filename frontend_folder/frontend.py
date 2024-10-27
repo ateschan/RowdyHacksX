@@ -137,8 +137,12 @@ def render_frontend():
                     border_bottom_right_radius=-1)
 
     # Capacitor
-    fluxValves(screen)
+
+    pygame.draw.circle(screen,(210, 180, 140), (975,330), 50)
+    pygame.draw.circle(screen,(210, 180, 140), (625,325), 50)
+    pygame.draw.circle(screen,(210, 180, 140), (800,715), 50)
     fluxCapacitor( screen, waveform1, waveform2, waveform3)
+    fluxValves(screen)
 
 # Here we should how to draw it onto a screen.
     screen.blit(textTop, textTopRect)

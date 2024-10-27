@@ -3,7 +3,7 @@ import pygame
 def fluxValves(screen):
 
     # Bottom Valve
-    pygame.draw.circle(screen,(166,5,5), (800,715), 50)
+    pygame.draw.circle(screen,(166,5,5), (800,715), 45)
     pygame.draw.circle(screen,(166,5,5), (920,728), 20)
     pygame.draw.rect(screen, (182,152,30), 
     pygame.Rect(780, 715, 
@@ -16,7 +16,7 @@ def fluxValves(screen):
     border_bottom_right_radius=-1)
 
     #  Top Left Valve
-    pygame.draw.circle(screen,(166,5,5), (625,325), 50)
+    pygame.draw.circle(screen,(166,5,5), (625,325), 45)
     pygame.draw.circle(screen,(166,5,5), (625,470),20 )
     pygame.draw.rect(screen, (182,152,30), 
     pygame.Rect(615, 330, 
@@ -29,7 +29,7 @@ def fluxValves(screen):
     border_bottom_right_radius=-1)
 
     #  Top RightValve
-    pygame.draw.circle(screen,(166,5,5), (975,330), 50)
+    pygame.draw.circle(screen,(166,5,5), (975,330), 45)
     pygame.draw.circle(screen,(166,5,5), (975,470), 20)
     pygame.draw.rect(screen, (182,152,30), 
     pygame.Rect(960, 330, 
