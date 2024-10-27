@@ -16,7 +16,7 @@ print(len(audio.frames[20].data[0]))
 for frame in audio.frames:
     for key_freq in frame.data:
         for sample in key_freq:
-            freq_data.append((int(k), sample))
+            freq_data.append((int(k), sample * 600))
             k+=1
 
 print(freq_data[:30])

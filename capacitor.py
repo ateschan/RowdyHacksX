@@ -70,7 +70,7 @@ def fluxCapacitor( screen, waveform1, waveform2, waveform3):
 
     surf3 = pygame.transform.rotate(surf3, -45)
     surf2 = pygame.transform.rotate(surf2, 45)
-    waveform1.scroll(1,0)
+    waveform1.scroll(512,0)
     waveform2.scroll(-1,0)
     waveform3.scroll(-1,0)
 
