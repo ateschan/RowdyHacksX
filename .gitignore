@@ -1,2 +1,4 @@
 .idea
 .git
+.venv
+./frontend_folder/__pycache__
