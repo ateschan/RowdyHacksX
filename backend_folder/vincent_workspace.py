@@ -6,8 +6,14 @@ import IPython.display as ipt
 # Beat tracking example
 import librosa
 
+<<<<<<< Updated upstream
 # 1. Get the file path
 filename = '../audio/sample3.WAV'
+=======
+# 1. Get the file path to an included audio example
+filename = './sample3.WAV'
+
+>>>>>>> Stashed changes
 
 samples, sample_rate = librosa.load(filename, sr=100000)
 total_samples = len(samples)
