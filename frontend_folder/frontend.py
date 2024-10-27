@@ -138,9 +138,9 @@ def render_frontend():
 
     # Capacitor
 
-    pygame.draw.circle(screen,(210, 180, 140), (975,330), 50)
-    pygame.draw.circle(screen,(210, 180, 140), (625,325), 50)
-    pygame.draw.circle(screen,(210, 180, 140), (800,715), 50)
+    pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2 + 175,330), 50)
+    pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2 - 175,325), 50)
+    pygame.draw.circle(screen,(210, 180, 140), (screen.get_width()/2,715), 50)
     fluxCapacitor( screen, waveform1, waveform2, waveform3)
     fluxValves(screen)
 
