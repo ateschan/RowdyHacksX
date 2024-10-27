@@ -2,7 +2,9 @@ import pygame
 from capacitor import fluxCapacitor
 from valves import fluxValves
 from waves import generate_wave
-from backend_folder.models.audio_file import AudioFile
+
+from models.audio_file import AudioFile
+
 
 
 pygame.font.init()
@@ -14,11 +16,12 @@ k = 0
 print(len(audio.frames[20].data[0]))
 sample_rate = 512
 for frame in audio.frames:
+
     freq1 = frame.data[:1]
     if len(freq1) > 0:
         print(len(freq1[0]))
         for sample in freq1[0]:
-            freq_data.append((int(k), sample))
+            freq_data.append((int(k), sample*600))
             k+=1
     else:
         for i in range(sample_rate):

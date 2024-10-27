@@ -1,6 +1,5 @@
-# Example file showing a basic pygame "game loop"
 import pygame
-import frontend_folder.frontend as fe
+from frontend import render_frontend
 
 
 def main():
@@ -17,7 +16,7 @@ def main():
                 running = False
 
         # fill the screen with a color to wipe away anything from last frame
-        fe.render_frontend()
+        render_frontend()
 
         # RENDER YOUR GAME HERE
 
