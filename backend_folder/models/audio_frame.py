@@ -9,7 +9,8 @@ class AudioFrame:
     def __init__(self, freqs, amps, sample_rate: int):
 
         self.sample_bins = np.linspace(0, np.pi,512)
-
+        self.freqs = freqs
+        self.amps = amps
         for i in range(len(amps)):
             d = [self.sine(amps[i], freqs[i], self.sample_bins[x]) for x in range(len(self.sample_bins))]
             self.data.append(d)
